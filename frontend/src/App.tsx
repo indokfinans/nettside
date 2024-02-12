@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // Import Navigate
 import theme from "./theme/theme";
 
 import MainPage from "./pages/MainPage";
@@ -17,6 +17,7 @@ function App() {
         <Box sx={{ paddingTop }}>
           <Navbar onHeightChange={setPaddingTop} />
           <Routes>
+            <Route path="/" element={<Navigate replace to="/home" />} /> {/* Redirect root to /home */}
             <Route path="/home" element={<MainPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
