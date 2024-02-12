@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid, Stack } from "@mui/material";
-import top_right from "../resources/images/top_right.jpeg";
+import top_right from "../resources/images/top_right.png";
 import carnegie_logo from "../resources/images/carnegie_logo.svg";
 import dnb_markets_logo from "../resources/images/dnb_markets_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
@@ -146,8 +146,8 @@ const MainPageLanding = () => {
                 src={instagramLogo}
                 alt="Instagram Logo"
                 sx={{
-                  width: { xs: "15px", md: "25px" },
-                  height: { xs: "15px", md: "25px" },
+                  width: { xs: "25px", md: "35px" },
+                  height: { xs: "25px", md: "35px" },
                 }}
               />
             </a>
@@ -176,8 +176,8 @@ const MainPageLanding = () => {
                 src={facebookLogo}
                 alt="Facebook Logo"
                 sx={{
-                  width: { xs: "15px", md: "25px" },
-                  height: { xs: "15px", md: "25px" },
+                  width: { xs: "25px", md: "35px" },
+                  height: { xs: "25px", md: "35px" },
                 }}
               />
             </a>
@@ -206,8 +206,8 @@ const MainPageLanding = () => {
                 src={linkedinLogo}
                 alt="LinkedIn Logo"
                 sx={{
-                  width: { xs: "15px", md: "25px" },
-                  height: { xs: "15px", md: "25px" },
+                  width: { xs: "25px", md: "35px" },
+                  height: { xs: "25px", md: "35px" },
                 }}
               />
             </a>

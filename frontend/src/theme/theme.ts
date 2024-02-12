@@ -12,6 +12,10 @@ let theme = createTheme({
     error: {
       main: "#ff3131",
     },
+    info: {
+      // orange/yellow
+      main: "#ff9e00",
+    },
     background: {
       default: "#1b2740",
       paper: "#f2f2f2",
@@ -34,7 +38,7 @@ let theme = createTheme({
       fontSize: "1rem",
     },
     body1: {
-      fontSize: "0.875rem",
+      fontSize: "1.4rem",
     },
     button: {
       textTransform: "none",

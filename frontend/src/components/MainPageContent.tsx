@@ -1,30 +1,31 @@
 import React from "react";
 import { Box, Grid, Typography, Button } from "@mui/material";
-import middle_right from "../resources/images/middle_right.jpeg"; // Make sure the path is correct
+import middle_right from "../resources/images/middle_right.png"; // Make sure the path is correct
 
 const MainPageContent = () => {
   return (
     <Box sx={{ bgcolor: "background.paper" }}>
-      <Grid container sx={{ minHeight: "100vh" }}>
+      {/* <Grid container sx={{ minHeight: "100vh" }}> */}
+      <Grid container >
         {" "}
         {/* Ensure the container is at least as tall as the viewport */}
         <Grid
           item
           xs={12}
-          sm={6}
+          md={6}
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            padding: (theme) => theme.spacing(6),
+            // padding: (theme) => theme.spacing(0),
           }}
         >
-          <Box sx={{ p: (theme) => theme.spacing(6) }}>
-            <Typography variant="h6" sx={{ color: "orange", mb: 2 }}>
-              OM OSS
+          <Box sx={{ p: {xs: 2, md: 4} }}>
+            <Typography variant="h1" sx={{ color: "red", mb: 2 }}>
+              Om Oss
             </Typography>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               Tidlig eksponering
             </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>
@@ -41,7 +42,7 @@ const MainPageContent = () => {
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} sx={{ height: 1 }}>
+        <Grid item xs={12} md={6} sx={{ height: 1 }}>
           {" "}
           {/* This makes the item take full height */}
           <Box

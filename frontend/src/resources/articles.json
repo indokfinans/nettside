@@ -1,0 +1,19 @@
+{
+    "articles": [
+        {
+            "title": "Article 1",
+            "category": "News",
+            "image": "image1.png",
+            "link": "https://www.linkedin.com/embed/feed/update/urn:li:share:7123031041266565120",
+            "postUrl": ""
+        },
+        {
+            "title": "Article 1",
+            "category": "News",
+            "image": "image1.png",
+            "link": "https://www.linkedin.com/embed/feed/update/urn:li:share:7162862358032269312",
+            "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7162862358787244032/"
+
+        }
+    ]
+}

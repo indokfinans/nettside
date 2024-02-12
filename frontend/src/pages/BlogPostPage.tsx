@@ -28,11 +28,12 @@ const BlogPostPage: React.FC = () => {
       try {
         // Dynamic import to get the markdown file
         const { content, metadata } = await import(
-          `../../public/resources/blogs/${slug}`
+          `../../public/blogs/${slug}`
         );
         // Parsing the markdown content to separate metadata and content
         // Convert the markdown content to HTML
-        marked.use(baseUrl(`/resources/blogs/${slug}`));
+        console.log(slug)
+        marked.use(baseUrl(`/blogs/${slug}/`));
         const htmlContent = await marked(content);
         console.log(htmlContent);
         setPost({ metadata, content: htmlContent });
