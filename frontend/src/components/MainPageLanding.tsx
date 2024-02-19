@@ -7,6 +7,11 @@ import facebookLogo from "../resources/images/facebook_logo.svg";
 import instagramLogo from "../resources/images/instagram_logo.svg";
 import linkedinLogo from "../resources/images/linkedIn_logo.svg";
 
+import { ButtonBase } from "@mui/material";
+
+
+import { link } from "./Link";
+
 const MainPageLanding = () => {
   return (
     <Box
@@ -32,7 +37,7 @@ const MainPageLanding = () => {
         >
           <Box sx={{ "& > :not(style)": { mb: { xs: 2, md: 4 } } }}>
             <Typography variant="h1" color="text.secondary" gutterBottom>
-              Kompromissløs avkastning for en
+             {"Sammen skaper vi\t"}
               <Box
                 component="span"
                 sx={{
@@ -42,7 +47,7 @@ const MainPageLanding = () => {
                   padding: "0 4px",
                 }}
               >
-                bedre verden.
+                meravkastning.
               </Box>
             </Typography>
             <Typography variant="h4" color="text.secondary">
@@ -50,12 +55,20 @@ const MainPageLanding = () => {
               økonomi og teknologiledelse (indøk) ved NTNU, Trondheim.
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Button variant="contained" color="secondary">
-                Årsrapport
-              </Button>
-              <Button variant="outlined" color="secondary">
-                Om oss
-              </Button>
+              {link("publications", 
+                <ButtonBase>
+                  <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
+                    <Typography variant="button">Årsrapport</Typography>
+                  </Box>
+                </ButtonBase>
+              )}
+              {link("about", 
+                <ButtonBase>
+                  <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
+                    <Typography variant="button" sx={{ color: "#ffffff" }}>Om oss</Typography>
+                  </Box>
+                </ButtonBase>
+              )}
             </Stack>
           </Box>
         </Grid>

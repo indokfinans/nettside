@@ -2,6 +2,21 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 // Define the theme
 let theme = createTheme({
+  components: {
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          '&::placeholder': {
+            color: 'black',
+          },
+          '&:focus::placeholder': {
+            color: 'black',
+          },
+          color: 'white',
+        },
+      },
+    },
+  },
   palette: {
     primary: {
       main: "#1f3553",

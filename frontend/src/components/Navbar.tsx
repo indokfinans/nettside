@@ -21,6 +21,8 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import Fab from '@mui/material/Fab';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
+import { link } from "./Link";
+
 const scrollToTop = () => {
   scroll.scrollToTop();
 };
@@ -32,8 +34,8 @@ const logo_box = (
     src={logo}
     alt="Logo"
     sx={{
-      height: { xs: "50px", md: "90px" },
-      width: { xs: "50px", md: "90px" },
+      height: { xs: "80px", md: "150px" },
+      width: { xs: "80px", md: "150px" },
     }}
   />
 )
@@ -49,27 +51,11 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [mobileOpen, setMobileOpen] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
-  };
-  
-
-
-  const link = (id: string, content: React.ReactNode) => {
-    return (
-      <Link
-        activeClass="active"
-        to={id}
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        onClick={handleDrawerToggle}
-      >
-          {content}
-      </Link>
-    );
   };
   
     useEffect(() => {
@@ -78,6 +64,18 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
       }
     }, []);
 
+    useEffect(() => {
+      const checkScrollTop = () => {
+        if (!showScrollTop && window.pageYOffset > 400){
+          setShowScrollTop(true)
+        } else if (showScrollTop && window.pageYOffset <= 400){
+          setShowScrollTop(false)
+        }
+      };
+      window.addEventListener('scroll', checkScrollTop)
+      return () => window.removeEventListener('scroll', checkScrollTop)
+    }, [showScrollTop]);
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -85,25 +83,25 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
       </Typography>
       <List>
           <ListItem button>
-            {link("landing", <ListItemText primary="Hjem" />)}
+            {link("landing", <ListItemText primary="Hjem" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("about", <ListItemText primary="Om oss" />)}
+            {link("about", <ListItemText primary="Om oss" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("portfolio", <ListItemText primary="Portefølje" />)}
+            {link("portfolio", <ListItemText primary="Portefølje" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("board", <ListItemText primary="Styret" />)}
+            {link("board", <ListItemText primary="Styret" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("publications", <ListItemText primary="Publikasjoner" />)}
+            {link("publications", <ListItemText primary="Publikasjoner" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("blog", <ListItemText primary="Nyheter" />)}
+            {link("blog", <ListItemText primary="Nyheter" />, handleDrawerToggle)}
           </ListItem>
           <ListItem button>
-            {link("contact", <ListItemText primary="Ta kontakt" />)}
+            {link("contact", <ListItemText primary="Ta kontakt" />, handleDrawerToggle)}
           </ListItem>
       </List>
     </Box>
@@ -211,9 +209,11 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
         )}
       </Toolbar>
     </AppBar>
-     <Fab color="secondary" aria-label="scroll back to top" onClick={scrollToTop} sx={{ position: 'fixed', bottom: 16, right: 16 }}>
-     <ArrowUpwardIcon />
-   </Fab>
+    {showScrollTop && (
+        <Fab color="secondary" aria-label="scroll back to top" onClick={scrollToTop} sx={{ position: 'fixed', bottom: 16, right: 16 }}>
+          <ArrowUpwardIcon />
+        </Fab>
+      )}
  </>
   );
 };
