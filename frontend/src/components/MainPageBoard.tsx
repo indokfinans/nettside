@@ -12,7 +12,7 @@ interface Member {
 const members: Member[] = [
     { name: "Martin Kristiansen Tømt", title: "Leder", email: "leder@example.com", image: "https://ca.slack-edge.com/T05QEA0N8ES-U05QM9GNQ90-79784d369169-72" },
     { name: "Bjørn Solli Moxnes", title: "Nestleder", email: "co-leder@example.com", image: "https://media.licdn.com/dms/image/D4D03AQF12DOXMT-V_Q/profile-displayphoto-shrink_800_800/0/1680960602566?e=1713398400&v=beta&t=ANwKP9xdH_DZayr29ZMKB8u0q5FDj_rLE75Un_qJH1g" },
-    { name: "Mikkel Honningsvåg Sandhaug", title: "Porteføljesjef", email: "mikkel.honningsvaag.sandhaug@gmail.com", image: "https://media.licdn.com/dms/image/D4D03AQFxP1o9EOuPTw/profile-displayphoto-shrink_800_800/0/1688314760791?e=1713398400&v=beta&t=zkT4phFfFFBPz4BXJJPG7NS-yggbEKf-Q7q-7Z8w6F4" },
+    { name: "Mikkel Honningsvåg Sandhaug", title: "Porteføljesjef", email: "mikkel@gmail.com", image: "https://media.licdn.com/dms/image/D4D03AQFxP1o9EOuPTw/profile-displayphoto-shrink_800_800/0/1688314760791?e=1713398400&v=beta&t=zkT4phFfFFBPz4BXJJPG7NS-yggbEKf-Q7q-7Z8w6F4" },
     { name: "Eskild Fasseland", title: "Leder Kvantegruppen", email: "kvantitativ@example.com", image: "https://media.licdn.com/dms/image/C5603AQHKV1bgoKJQZw/profile-displayphoto-shrink_200_200/0/1663218159270?e=1713398400&v=beta&t=Xd1eakLd_xhaaBEJ6XT4pHfdeOocXnULii-A5f4Qufk" },
     { name: "Johannes Kvåle", title: "HR-leder", email: "hr@example.com", image: "url-to-image" },
     { name: "Helene Lyslo Kristiansen", title: "Markedsføringsleder", email: "markedsforing@example.com", image: "https://media.licdn.com/dms/image/D4D03AQFpu3oqN1f12A/profile-displayphoto-shrink_800_800/0/1686595406261?e=1713398400&v=beta&t=bpHAtACpeDPDadSF05vldsLVTDunFnY91tehm_OflVE" },
