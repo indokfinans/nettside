@@ -1,4 +1,4 @@
-import { LinkedInEmbed } from 'react-social-media-embed';
+import { LinkedInEmbed, InstagramEmbed } from 'react-social-media-embed';
 import React from "react";
 import {
   Box,
@@ -10,13 +10,11 @@ import {
   CardContent,
 } from "@mui/material";
 import articlesData from '../resources/articles.json';
-import logo from "../resources/images/logo.svg";
-import { Image } from '@mui/icons-material';
 
 interface Article {
   title: string;
+  type: string;
   category: string;
-  image: string;
   link: string;
   postUrl: string;
 }
@@ -39,14 +37,22 @@ const MainPageBlog = () => {
               <Card elevation={8} >
                 <CardActionArea href={article.postUrl} sx={{ height: "auto" }}>
                   <Box sx={{ position: 'relative' }}>
-              <LinkedInEmbed url={article.link} postUrl={article.postUrl} />
+              {
+                article.type === 'linkedin' ? 
+                  <LinkedInEmbed url={article.link} postUrl={article.postUrl} /> 
+                : 
+                  article.type === 'instagram' ? 
+                    <InstagramEmbed url={article.link} captioned={true} /> 
+                  : 
+                    null
+              }
                     {/* <CardMedia
                       component="img"
                       image={require(`../resources/images/articles/${article.image}`)}
                       alt={`Blog Post ${index + 1}`}
                       sx={{ height: 'auto' }}
                     /> */}
-                    <Typography variant="overline" display="block" gutterBottom
+                    {/* <Typography variant="overline" display="block" gutterBottom
                       sx={{
                         position: 'absolute',
                         top: 16,
@@ -59,7 +65,7 @@ const MainPageBlog = () => {
                       }}
                     >
                       {article.category}
-                    </Typography>
+                    </Typography> */}
                   </Box>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">

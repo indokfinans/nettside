@@ -1,19 +1,33 @@
 {
     "articles": [
         {
-            "title": "Article 1",
+            "title": "Første kvartalsrapport",
             "category": "News",
-            "image": "image1.png",
-            "link": "https://www.linkedin.com/embed/feed/update/urn:li:share:7123031041266565120",
-            "postUrl": ""
+            "type": "linkedin",
+            "link": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7149423472388071424",
+            "postUrl": "https://www.linkedin.com/posts/indokfinans_kvartalsrapport-q4-2023-ugcPost-7149423472388071424-cKtm?utm_source=share&utm_medium=member_desktop"
         },
         {
-            "title": "Article 1",
+            "title": "Danske Bank",
             "category": "News",
-            "image": "image1.png",
-            "link": "https://www.linkedin.com/embed/feed/update/urn:li:share:7162862358032269312",
-            "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7162862358787244032/"
+            "type": "instagram",
+            "link": "https://www.instagram.com/p/C2riAvNtihN/?utm_source=ig_embed&amp;utm_campaign=loading",
+            "postUrl": "https://www.instagram.com/p/C2riAvNtihN/?utm_source=ig_embed&amp;utm_campaign=loading"
 
+        },
+        {
+            "title": "DNB Markets",
+            "category": "News",
+            "type": "instagram",
+            "link": "https://www.instagram.com/p/CyOSky6NecZ/?utm_source=ig_embed&amp;utm_campaign=loading",
+            "postUrl": "https://www.instagram.com/p/CyOSky6NecZ/?utm_source=ig_embed&amp;utm_campaign=loading"
+        },
+        {
+            "title": "Det nye styret",
+            "category": "News",
+            "type": "instagram",
+            "link": "https://www.instagram.com/p/CtbuO99ttm-/?utm_source=ig_embed&amp;utm_campaign=loading",
+            "postUrl": "https://www.instagram.com/p/CtbuO99ttm-/?utm_source=ig_embed&amp;utm_campaign=loading"
         }
     ]
 }

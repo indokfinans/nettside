@@ -10,11 +10,7 @@ interface Report {
 
 const reports: Report[] = [
     { title: "Årsrapport 2022", type: "Årlig", url: "https://media.licdn.com/dms/document/media/D4D1FAQFKjW3cN35stA/feedshare-document-pdf-analyzed/0/1682355568239?e=1708560000&v=beta&t=BNKqXtpWNNIsJ4HjkrMArxaFzFIkBJxLENJaC33j9_M" },
-    { title: "Årsrapport 2021", type: "Årlig", url: "https://media.licdn.com/dms/document/media/D4D1FAQFKjW3cN35stA/feedshare-document-pdf-analyzed/0/1682355568239?e=1708560000&v=beta&t=BNKqXtpWNNIsJ4HjkrMArxaFzFIkBJxLENJaC33j9_M" },
     { title: "Kvartalsrapport Q4 2023", type: "Kvartalsvis", url: "https://media.licdn.com/dms/document/media/D4D1FAQFhaRV_9l0TNg/feedshare-document-pdf-analyzed/0/1704555296160?e=1708560000&v=beta&t=jAvpOX-n2is7ukrIWzPc_NAorqv_hBSYT21oRm8Vc1Y" },
-    { title: "Kvartalsrapport Q3 2023", type: "Kvartalsvis", url: "https://media.licdn.com/dms/document/media/D4D1FAQFhaRV_9l0TNg/feedshare-document-pdf-analyzed/0/1704555296160?e=1708560000&v=beta&t=jAvpOX-n2is7ukrIWzPc_NAorqv_hBSYT21oRm8Vc1Y" },
-   { title: "Kvartalsrapport Q2 2023", type: "Kvartalsvis", url: "https://media.licdn.com/dms/document/media/D4D1FAQFhaRV_9l0TNg/feedshare-document-pdf-analyzed/0/1704555296160?e=1708560000&v=beta&t=jAvpOX-n2is7ukrIWzPc_NAorqv_hBSYT21oRm8Vc1Y" },
-    // Add more reports as needed
 ];
 
 const MainPagePublications = () => {
