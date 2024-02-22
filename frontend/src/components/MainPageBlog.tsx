@@ -24,7 +24,7 @@ const MainPageBlog = () => {
 
   return (
     <Box sx={{ bgcolor: "background.default", p: 4 }}>
-      <Typography variant="h1" sx={{ color: "orange", pb: { xs: 2, md: 4 } }}>
+      <Typography variant="h1" sx={{ color: "error.main", pb: { xs: 2, sm: 4 } }}>
         Nyheter
       </Typography>
         <Typography variant="h2" gutterBottom color={"text.secondary"}>
@@ -33,7 +33,7 @@ const MainPageBlog = () => {
       <Box sx={{ overflowX: 'auto' }}>
         <Grid container spacing={2}>
           {articles.map((article, index) => (
-            <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index}>
+            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} key={index}>
               <Card elevation={8} >
                 <CardActionArea href={article.postUrl} sx={{ height: "auto" }}>
                   <Box sx={{ position: 'relative' }}>

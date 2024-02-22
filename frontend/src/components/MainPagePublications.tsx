@@ -9,8 +9,8 @@ interface Report {
 }
 
 const reports: Report[] = [
-    { title: "Årsrapport 2022", type: "Årlig", url: "https://media.licdn.com/dms/document/media/D4D1FAQFKjW3cN35stA/feedshare-document-pdf-analyzed/0/1682355568239?e=1708560000&v=beta&t=BNKqXtpWNNIsJ4HjkrMArxaFzFIkBJxLENJaC33j9_M" },
-    { title: "Kvartalsrapport Q4 2023", type: "Kvartalsvis", url: "https://media.licdn.com/dms/document/media/D4D1FAQFhaRV_9l0TNg/feedshare-document-pdf-analyzed/0/1704555296160?e=1708560000&v=beta&t=jAvpOX-n2is7ukrIWzPc_NAorqv_hBSYT21oRm8Vc1Y" },
+    { title: "Årsrapport 2022", type: "Årlig", url: `${process.env.PUBLIC_URL}/publications/infi_annual22.pdf` },
+    { title: "Kvartalsrapport Q4 2023", type: "Kvartalsvis", url: `${process.env.PUBLIC_URL}/publications/infi_q423.pdf` },
 ];
 
 const MainPagePublications = () => {
@@ -19,7 +19,7 @@ const MainPagePublications = () => {
 
     return (
         <Box sx={{ bgcolor: "background.paper", padding: (theme) => theme.spacing(4) }}>
-            <Typography variant="h1" gutterBottom align="left" color={"red"}>
+            <Typography variant="h1" gutterBottom align="left" color={"error.main"}>
                 Publikasjoner
             </Typography>
             <Grid container spacing={4}>
@@ -32,7 +32,7 @@ const MainPagePublications = () => {
                             <Typography variant="h5" gutterBottom color={"primary"}>
                                 {report.title}
                             </Typography>
-                            <Link href={report.url} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
+                            <Link href={report.url} download={`Infi ${report.title}`} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
                                 Last ned PDF
                             </Link>
                         </Box>
@@ -48,7 +48,7 @@ const MainPagePublications = () => {
                             <Typography variant="h5" gutterBottom color={"primary"}>
                                 {report.title}
                             </Typography>
-                            <Link href={report.url} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
+                            <Link href={report.url} download={`Infi ${report.title}`} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
                                 Last ned PDF
                             </Link>
                         </Box>

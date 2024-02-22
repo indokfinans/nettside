@@ -62,9 +62,9 @@ let theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600, // small devices
-      md: 900, // medium devices
-      lg: 1200, // large devices
+      sm: 900, // small devices
+      md: 1000, // medium devices
+      lg: 1300, // large devices
       xl: 1536, // extra-large devices
     },
   },

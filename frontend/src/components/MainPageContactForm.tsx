@@ -12,14 +12,14 @@ const MainPageContactForm: React.FC = () => {
                 borderRadius: 1,
             }}
         >
-            <Typography variant="h1" gutterBottom align="left" color="red">
+            <Typography variant="h1" gutterBottom align="left" color="error.main">
                 Kontakt oss
             </Typography>
             <Typography variant="h4" color="primary">
                 Ikke nøl med å ta kontakt med oss, enten du er interessert i å bli medlem, ønsker å samarbeide, eller har andre spørsmål.
                 <br />
                 <br />
-                <Link href="leder@infi.no" color="primary"> {"leder@infi.no"}</Link>
+                <Link href="leder@indokfinans.no" color="primary"> {"leder@indokfinans.no"}</Link>
             </Typography>
         </Box>
     );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid, Stack } from "@mui/material";
-import top_right from "../resources/images/top_right.png";
+import top_right from "../resources/images/top_right_2.jpeg";
 import carnegie_logo from "../resources/images/carnegie_logo.svg";
 import dnb_markets_logo from "../resources/images/dnb_markets_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
@@ -25,17 +25,18 @@ const MainPageLanding = () => {
         <Grid
           item
           xs={12}
-          md={6}
+          sm={12}
+          lg={6}
           p={0}
           m={0}
           sx={{
-            px: { xs: 2, md: 4 },
+            px: { xs: 2, sm: 4 },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <Box sx={{ "& > :not(style)": { mb: { xs: 2, md: 4 } } }}>
+          <Box sx={{ "& > :not(style)": { mb: { xs: 2, sm: 4 } } }}>
             <Typography variant="h1" color="text.secondary" gutterBottom>
              {"Sammen skaper vi\t"}
               <Box
@@ -75,16 +76,17 @@ const MainPageLanding = () => {
         <Grid
           item
           xs={12}
-          md={6}
+          sm={12}
+          lg={6}
           sx={{ display: "flex", justifyContent: "flex-end" }}
         >
           <Box
             component="img"
             src={top_right}
             alt="Landing Image"
-            width={{ xs: "100%", md: "75%" }}
-            minWidth={"500px"}
-            height="auto"
+            width={{ xs: "100%", sm: "100%" }}
+            minWidth={"700px"}
+            height={"auto"}
           />
         </Grid>
         <Grid
@@ -92,8 +94,8 @@ const MainPageLanding = () => {
           xs={6}
           sx={{
             display: "flex",
-            flexDirection: { xs: "row", md: "row" },
-            justifyContent: { xs: "center", md: "left" },
+            flexDirection: { xs: "row", sm: "row" },
+            justifyContent: { xs: "center", sm: "left" },
             alignItems: "center",
           }}
         >
@@ -102,9 +104,9 @@ const MainPageLanding = () => {
             src={carnegie_logo}
             alt="Carnegie Logo"
             sx={{
-              width: { xs: "50%", md: "15%" },
-              //   mb: { xs: 0.5, md: 0 },
-              //   mr: { xs: 0, md: 0.5 },
+              width: { xs: "50%", sm: "15%" },
+              //   mb: { xs: 0.5, sm: 0 },
+              //   mr: { xs: 0, sm: 0.5 },
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
             }} // margin right on medium screens, bottom margin on small screens
@@ -114,9 +116,9 @@ const MainPageLanding = () => {
             src={dnb_markets_logo}
             alt="DNB Markets Logo"
             sx={{
-              width: { xs: "50%", md: "15%" },
-              //   mt: { xs: 0.5, md: 0 },
-              //   ml: { xs: 0, md: 0.5 },
+              width: { xs: "50%", sm: "15%" },
+              //   mt: { xs: 0.5, sm: 0 },
+              //   ml: { xs: 0, sm: 0.5 },
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
             }} // margin left on medium screens, top margin on small screens
@@ -125,12 +127,12 @@ const MainPageLanding = () => {
         <Grid
           item
           xs={12}
-          md={6}
+          sm={6}
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: { xs: "center", md: "right" },
-            flexDirection: { xs: "row", md: "row" },
+            justifyContent: { xs: "center", sm: "right" },
+            flexDirection: { xs: "row", sm: "row" },
             p: (theme) => theme.spacing(2),
             gap: 3,
           }}
@@ -144,7 +146,7 @@ const MainPageLanding = () => {
           >
             <Typography
               variant="h6"
-              sx={{ display: { xs: "none", md: "block" } }}
+              sx={{ display: { xs: "none", sm: "block" } }}
               color="secondary"
             >
               @indokfinans
@@ -159,8 +161,8 @@ const MainPageLanding = () => {
                 src={instagramLogo}
                 alt="Instagram Logo"
                 sx={{
-                  width: { xs: "25px", md: "35px" },
-                  height: { xs: "25px", md: "35px" },
+                  width: { xs: "25px", sm: "35px" },
+                  height: { xs: "25px", sm: "35px" },
                 }}
               />
             </a>
@@ -174,7 +176,7 @@ const MainPageLanding = () => {
           >
             <Typography
               variant="h6"
-              sx={{ display: { xs: "none", md: "block" } }}
+              sx={{ display: { xs: "none", sm: "block" } }}
               color="secondary"
             >
               InFi - Indøk Finansklubb
@@ -189,8 +191,8 @@ const MainPageLanding = () => {
                 src={facebookLogo}
                 alt="Facebook Logo"
                 sx={{
-                  width: { xs: "25px", md: "35px" },
-                  height: { xs: "25px", md: "35px" },
+                  width: { xs: "25px", sm: "35px" },
+                  height: { xs: "25px", sm: "35px" },
                 }}
               />
             </a>
@@ -204,7 +206,7 @@ const MainPageLanding = () => {
           >
             <Typography
               variant="h6"
-              sx={{ display: { xs: "none", md: "block" } }}
+              sx={{ display: { xs: "none", sm: "block" } }}
               color="secondary"
             >
               InFi - Indøk Finansklubb
@@ -219,8 +221,8 @@ const MainPageLanding = () => {
                 src={linkedinLogo}
                 alt="LinkedIn Logo"
                 sx={{
-                  width: { xs: "25px", md: "35px" },
-                  height: { xs: "25px", md: "35px" },
+                  width: { xs: "25px", sm: "35px" },
+                  height: { xs: "25px", sm: "35px" },
                 }}
               />
             </a>

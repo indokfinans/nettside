@@ -12,7 +12,7 @@ const MainPageContent = () => {
         <Grid
           item
           xs={12}
-          md={6}
+          sm={6}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -21,8 +21,8 @@ const MainPageContent = () => {
             // padding: (theme) => theme.spacing(0),
           }}
         >
-          <Box sx={{ p: {xs: 2, md: 4} }}>
-            <Typography variant="h1" sx={{ color: "red", mb: 2 }}>
+          <Box sx={{ p: {xs: 2, sm: 4} }}>
+            <Typography variant="h1" sx={{ color: "error.main", mb: 2 }}>
               Om Oss
             </Typography>
             <Typography variant="h3" gutterBottom>
@@ -37,12 +37,12 @@ const MainPageContent = () => {
               året etter oppstart forvaltet finansklubben en papirportefølje som
               utkonkurrerte Oslo Børs.
             </Typography>
-            <Button variant="contained" color="primary">
+            {/* <Button variant="contained" color="primary">
               Les mer
-            </Button>
+            </Button> */}
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ height: 1 }}>
+        <Grid item xs={12} sm={6} sx={{ height: 1 }}>
           {" "}
           {/* This makes the item take full height */}
           <Box
