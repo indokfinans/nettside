@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid, Stack } from "@mui/material";
-import top_right from "../resources/images/top_right_2.jpeg";
+import top_right from "../resources/images/top_right_3.jpeg";
 import carnegie_logo from "../resources/images/carnegie_logo.svg";
 import dnb_markets_logo from "../resources/images/dnb_markets_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
@@ -85,7 +85,7 @@ const MainPageLanding = () => {
             src={top_right}
             alt="Landing Image"
             width={{ xs: "100%", sm: "100%" }}
-            minWidth={"700px"}
+            // minWidth={"700px"}
             height={"auto"}
           />
         </Grid>
