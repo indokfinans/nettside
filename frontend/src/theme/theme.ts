@@ -1,6 +1,5 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-// Define the theme
 let theme = createTheme({
   components: {
     MuiInput: {

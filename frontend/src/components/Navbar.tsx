@@ -13,11 +13,11 @@ import {
   ListItemText,
   ButtonBase
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu"; // Import MenuIcon
-import { useTheme } from "@mui/material/styles"; // Import useTheme for accessing the theme
+import MenuIcon from "@mui/icons-material/Menu"; 
+import { useTheme } from "@mui/material/styles"; 
 import logo from "../resources/images/logo.svg";
 import { useNavigate } from "react-router-dom";
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import Fab from '@mui/material/Fab';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 

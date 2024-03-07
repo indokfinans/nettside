@@ -1,5 +1,5 @@
 import React from "react";
-import MainPageLanding from "../components/MainPageLanding"; // import the MainPageLanding component
+import MainPageLanding from "../components/MainPageLanding"; 
 import MainPageContent from "../components/MainPageContent";
 import MainPageBlog from "../components/MainPageBlog";
 import MainPageBoard from "../components/MainPageBoard";
@@ -33,6 +33,9 @@ const MainPage: React.FC = () => {
           <Typography variant="body1" gutterBottom align="center" color={"secondary.main"}>
             Utviklet av Jørgen og Simen Sandhaug.<br/>
             Design av Hans Kristian Bjørgo Kværum
+            <br/>
+            <br/>
+            Organisasjonsnummer: 930 228 095
           </Typography>
         </Box>
       </div>

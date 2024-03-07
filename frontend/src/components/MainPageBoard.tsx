@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Grid, Typography, Avatar } from "@mui/material";
-import { Link } from "@mui/material";
 
 import helene from "../resources/images/profilbilder/helene.jpeg"
 import johannes from "../resources/images/profilbilder/johannes.jpeg"

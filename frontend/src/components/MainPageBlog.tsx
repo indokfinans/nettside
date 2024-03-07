@@ -6,7 +6,6 @@ import {
   Grid,
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
 } from "@mui/material";
 import articlesData from '../resources/articles.json';

@@ -109,7 +109,7 @@ const MainPageLanding = () => {
               //   mr: { xs: 0, sm: 0.5 },
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
-            }} // margin right on medium screens, bottom margin on small screens
+            }} 
           />
           <Box
             component="img"
@@ -121,7 +121,7 @@ const MainPageLanding = () => {
               //   ml: { xs: 0, sm: 0.5 },
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
-            }} // margin left on medium screens, top margin on small screens
+            }}
           />
         </Grid>
         <Grid

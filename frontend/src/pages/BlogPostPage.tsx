@@ -1,3 +1,4 @@
+// DENNE BRUKES IKKE, ERSTATTET DENNE FUNKSJONALITETEN MED EMBEDDED INSTAGRAM OG LINKEDIN POSTS
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { marked } from "marked";
@@ -39,7 +40,6 @@ const BlogPostPage: React.FC = () => {
         setPost({ metadata, content: htmlContent });
       } catch (error) {
         console.error("Error loading blog post content:", error);
-        // Handle the error state appropriately
       }
     };
 
@@ -52,7 +52,6 @@ const BlogPostPage: React.FC = () => {
     <article>
       <h1>{post.metadata.publishedAt}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      {/* Render additional post details like author, date, etc., from post.metadata */}
     </article>
   );
 };
