@@ -3,14 +3,14 @@ import { Box, Typography, Link } from "@mui/material";
 import { styled } from "@mui/system";
 
 const StyledLink = styled(Link)({
-  cursor: 'pointer',
-  fontWeight: 'bold',
-  '&:hover': {
-    textDecoration: 'underline',
-  },
-  '&:active': {
-    color: 'darkblue',
-  },
+    cursor: 'pointer',
+    fontWeight: 'bold',
+    '&:hover': {
+        textDecoration: 'underline',
+    },
+    '&:active': {
+        color: 'darkblue',
+    },
 });
 
 interface Report {
@@ -41,10 +41,10 @@ const MainPagePublications = () => {
             </Typography>
             {reports.map((report, index) => (
                 <Box key={index} marginBottom={2}>
-                    <StyledLink href={report.url} color="info.main" underline="none">
-                    <Typography variant="h5" gutterBottom color={"info.main"}>
-                        {report.title}
-                    </Typography>
+                    <StyledLink href={report.url} color="info.main" underline="none" target="_blank" rel="noopener noreferrer">
+                        <Typography variant="h5" gutterBottom color={"info.main"}>
+                            {report.title}
+                        </Typography>
                     </StyledLink>
                 </Box>
             ))}
