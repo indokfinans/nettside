@@ -1,46 +1,31 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 let theme = createTheme({
-  components: {
-    MuiInput: {
-      styleOverrides: {
-        root: {
-          '&::placeholder': {
-            color: 'black',
-          },
-          '&:focus::placeholder': {
-            color: 'black',
-          },
-          color: 'white',
-        },
-      },
-    },
-  },
   palette: {
     primary: {
-      main: "#1f3553",
+      main: "#172F56",
     },
     secondary: {
       main: "#f2f2f2",
     },
     error: {
-      main: "#ff3131",
+      main: "#CCE6F7",
     },
     info: {
       // orange/yellow
-      main: "#ff9e00",
+      main: "#466D8C",
     },
     background: {
-      default: "#1b2740",
+      default: "#172F56",
       paper: "#f2f2f2",
     },
     text: {
-      primary: "#182c49",
+      primary: "#172F56",
       secondary: "#ffffff",
     },
   },
   typography: {
-    fontFamily: "'Inter', Helvetica, Arial, sans-serif",
+    fontFamily: "'Helvetica Neue', 'Inter', Helvetica, Arial, sans-serif",
     h1: {
       fontSize: "4.5rem", // Adjust the size as needed
       // fontWeight: "bold",

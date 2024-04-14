@@ -5,7 +5,6 @@ import theme from "./theme/theme";
 
 import MainPage from "./pages/MainPage";
 import Navbar from "./components/Navbar";
-import BlogPostPage from "./pages/BlogPostPage";
 import { Box } from "@mui/material";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate replace to="/home" />} /> {/* Redirect root to /home */}
             <Route path="/home" element={<MainPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </Box>
       </Router>

@@ -1,6 +1,17 @@
 import React from "react";
-import { Box, Grid, Typography, Link } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
 import { styled } from "@mui/system";
+
+const StyledLink = styled(Link)({
+  cursor: 'pointer',
+  fontWeight: 'bold', // Add this line
+  '&:hover': {
+    textDecoration: 'underline',
+  },
+  '&:active': {
+    color: 'darkblue',
+  },
+});
 
 interface Report {
     title: string;
@@ -14,47 +25,21 @@ const reports: Report[] = [
 ];
 
 const MainPagePublications = () => {
-    const annualReports = reports.filter(report => report.type === "Årlig");
-    const quarterlyReports = reports.filter(report => report.type === "Kvartalsvis");
-
     return (
         <Box sx={{ bgcolor: "background.paper", padding: (theme) => theme.spacing(4) }}>
-            <Typography variant="h1" gutterBottom align="left" color={"error.main"}>
+            <Typography variant="h1" gutterBottom align="left" color={"text.primary"}>
                 Publikasjoner
             </Typography>
-            <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
-                    <Typography variant="h2" gutterBottom color={"primary"}>
-                        Årlige rapporter
+            {reports.map((report, index) => (
+                <Box key={index} marginBottom={2}>
+                    {/* <Link href={report.url} download={`Infi ${report.title}`} color="primary" underline="none" target="_blank" rel="noopener noreferrer"> */}
+                    <StyledLink href={report.url} color="info.main" underline="none">
+                    <Typography variant="h5" gutterBottom color={"info.main"}>
+                        {report.title}
                     </Typography>
-                    {annualReports.map((report, index) => (
-                        <Box key={index} marginBottom={2}>
-                            <Typography variant="h5" gutterBottom color={"primary"}>
-                                {report.title}
-                            </Typography>
-                            <Link href={report.url} download={`Infi ${report.title}`} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
-                                Last ned PDF
-                            </Link>
-                        </Box>
-                    ))}
-
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Typography variant="h2" gutterBottom color={"primary"}>
-                        Kvartalsrapporter
-                    </Typography>
-                    {quarterlyReports.map((report, index) => (
-                        <Box key={index} marginBottom={2}>
-                            <Typography variant="h5" gutterBottom color={"primary"}>
-                                {report.title}
-                            </Typography>
-                            <Link href={report.url} download={`Infi ${report.title}`} color="primary" underline="none" target="_blank" rel="noopener noreferrer">
-                                Last ned PDF
-                            </Link>
-                        </Box>
-                    ))}
-                </Grid>
-            </Grid>
+                    </StyledLink>
+                </Box>
+            ))}
         </Box>
     );
 };

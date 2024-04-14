@@ -5,6 +5,7 @@ import MainPageBlog from "../components/MainPageBlog";
 import MainPageBoard from "../components/MainPageBoard";
 import MainPagePublications from "../components/MainPagePublications";
 import MainPageContactForm from "../components/MainPageContactForm";
+import Footer from "../components/Footer"; 
 import { Box, Typography } from "@mui/material";
 
 const MainPage: React.FC = () => {
@@ -29,15 +30,7 @@ const MainPage: React.FC = () => {
         <MainPageContactForm />
       </div>
       <div id="madeby">
-        <Box sx={{ bgcolor: "background.default", p: 4 }}>
-          <Typography variant="body1" gutterBottom align="center" color={"secondary.main"}>
-            Utviklet av Jørgen og Simen Sandhaug.<br/>
-            Design av Hans Kristian Bjørgo Kværum
-            <br/>
-            <br/>
-            Organisasjonsnummer: 930 228 095
-          </Typography>
-        </Box>
+        <Footer />
       </div>
     </div>
   );

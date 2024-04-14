@@ -22,13 +22,13 @@ const MainPageContent = () => {
           }}
         >
           <Box sx={{ p: {xs: 2, sm: 4} }}>
-            <Typography variant="h1" sx={{ color: "error.main", mb: 2 }}>
+            <Typography variant="h1" sx={{ color: "text.primary", mb: 2 }}>
               Om Oss
             </Typography>
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h3" gutterBottom sx={{ color: "info.main" }}>
               Tidlig eksponering
             </Typography>
-            <Typography variant="body1" sx={{ mb: 2 }}>
+            <Typography variant="body1" sx={{ mb: 2 }} color="primary">
               Indøk Finansklubb ble etablert våren 2021 for å samle
               finansinteresserte studenter ved Industriell økonomi og
               teknologiledelse (indøk) ved NTNU, Trondheim. Finansklubben består

@@ -16,12 +16,12 @@ interface Member {
 }
 
 const members: Member[] = [
-    { name: "Johannes Kvåle", title: "HR-leder", email: "hr@example.com", image: johannes },
-    { name: "Helene Lyslo Kristiansen", title: "Markedsføringsleder", email: "markedsforing@example.com", image: helene },
     { name: "Martin Kristiansen Tømt", title: "Leder", email: "leder@example.com", image: martin },
-    { name: "Mikkel Honningsvåg Sandhaug", title: "Porteføljesjef", email: "mikkel@gmail.com", image: mikkel },
     { name: "Bjørn Solli Moxnes", title: "Nestleder", email: "co-leder@example.com", image: bjorn },
+    { name: "Mikkel Honningsvåg Sandhaug", title: "Porteføljesjef", email: "mikkel@gmail.com", image: mikkel },
     { name: "Eskild Fasseland", title: "Leder Kvantegruppen", email: "kvantitativ@example.com", image: eskild },
+    { name: "Helene Lyslo Kristiansen", title: "Markedsføringsleder", email: "markedsforing@example.com", image: helene },
+    { name: "Johannes Kvåle", title: "HR-leder", email: "hr@example.com", image: johannes },
 ];
 
 const MainPageBoard = () => {
