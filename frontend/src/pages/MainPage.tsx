@@ -2,10 +2,12 @@ import React from "react";
 import MainPageLanding from "../components/MainPageLanding"; 
 import MainPageContent from "../components/MainPageContent";
 import MainPageBlog from "../components/MainPageBlog";
+import MainPagePostsSlideShow from "../components/MainPagePostsSlideShow";
 import MainPageBoard from "../components/MainPageBoard";
 import MainPagePublications from "../components/MainPagePublications";
 import MainPageContactForm from "../components/MainPageContactForm";
 import Footer from "../components/Footer"; 
+
 import { Box, Typography } from "@mui/material";
 
 const MainPage: React.FC = () => {
@@ -23,8 +25,11 @@ const MainPage: React.FC = () => {
       <div id="publications">
         <MainPagePublications />
       </div>
-      <div id="blog">
+      {/* <div id="blog">
         <MainPageBlog />
+      </div> */}
+      <div id="blog">
+        <MainPagePostsSlideShow />
       </div>
       <div id="contact">
         <MainPageContactForm />

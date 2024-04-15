@@ -39,6 +39,9 @@ let theme = createTheme({
     body1: {
       fontSize: "1.4rem",
     },
+    body2: {
+      fontSize: "1rem",
+    },
     button: {
       textTransform: "none",
     },

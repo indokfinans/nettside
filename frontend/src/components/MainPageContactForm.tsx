@@ -1,13 +1,12 @@
-// Updated Contact Form with Email API Integration
 import React, { useState } from "react";
-import { Link, Box, Typography, TextField, Button } from "@mui/material";
+import { Link, Box, Typography, TextField, Button, Snackbar, Alert, SnackbarCloseReason } from "@mui/material";
 import emailjs from '@emailjs/browser';
-
 
 const MainPageContactForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [fromName, setFromName] = useState('');
+    const [emailStatus, setEmailStatus] = useState({ success: false, error: false });
 
     const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -16,12 +15,23 @@ const MainPageContactForm: React.FC = () => {
         })
             .then((result) => {
                 console.log(result.text);
+                setEmailStatus({ success: true, error: false });
+                setEmail('');
+                setMessage('');
+                setFromName('');
             }, (error) => {
                 console.log(error.text);
+                setEmailStatus({ success: false, error: true });
             });
-        setEmail('');
-        setMessage('');
     };
+
+    const handleClose = (event: React.SyntheticEvent | Event, reason?: SnackbarCloseReason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setEmailStatus({ success: false, error: false });
+    };
+
     return (
         <>
             <Box
@@ -63,6 +73,11 @@ const MainPageContactForm: React.FC = () => {
                         fullWidth
                         required
                         sx={{ mb: 2 }}
+                        InputLabelProps={{
+                            style: {
+                                color: '#172F56'
+                            }
+                        }}
                     />
                     <TextField
                         label="Din e-post"
@@ -73,6 +88,11 @@ const MainPageContactForm: React.FC = () => {
                         fullWidth
                         required
                         sx={{ mb: 2 }}
+                        InputLabelProps={{
+                            style: {
+                                color: '#172F56'
+                            }
+                        }}
                     />
                     <TextField
                         label="Din melding"
@@ -84,16 +104,29 @@ const MainPageContactForm: React.FC = () => {
                         fullWidth
                         required
                         sx={{ mb: 2 }}
+                        InputLabelProps={{
+                            style: {
+                                color: '#172F56'
+                            }
+                        }}
                     />
                     <Button type="submit" variant="contained" color="primary">
                         Send melding
                     </Button>
                 </form>
             </Box>
+            <Snackbar open={emailStatus.success} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                    Email successfully sent!
+                </Alert>
+            </Snackbar>
+            <Snackbar open={emailStatus.error} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+                    Error sending email!
+                </Alert>
+            </Snackbar>
         </>
     );
 };
 
 export default MainPageContactForm;
-
-

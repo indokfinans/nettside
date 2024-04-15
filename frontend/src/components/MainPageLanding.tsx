@@ -10,7 +10,7 @@ import linkedinLogo from "../resources/images/linkedIn_logo.svg";
 import { ButtonBase } from "@mui/material";
 
 
-import { link } from "./Link";
+import { CustomLink } from "./Link";
 
 const MainPageLanding = () => {
   return (
@@ -57,20 +57,20 @@ const MainPageLanding = () => {
               økonomi og teknologiledelse (indøk) ved NTNU, Trondheim.
             </Typography>
             <Stack direction="row" spacing={2}>
-              {link("publications", 
+              <CustomLink id="publications">
                 <ButtonBase>
                   <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
                     <Typography variant="button">Årsrapport</Typography>
                   </Box>
                 </ButtonBase>
-              )}
-              {link("about", 
+              </CustomLink>
+              <CustomLink id="about">
                 <ButtonBase>
                   <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
                     <Typography variant="button" sx={{ color: "#ffffff" }}>Om oss</Typography>
                   </Box>
                 </ButtonBase>
-              )}
+              </CustomLink>
             </Stack>
           </Box>
         </Grid>
