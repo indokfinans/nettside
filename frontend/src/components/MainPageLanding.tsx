@@ -148,6 +148,7 @@ const MainPageLanding = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              textAlign: "right",
               gap: 1,
             }}
           >
@@ -184,6 +185,7 @@ const MainPageLanding = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              textAlign: "right",
               gap: 1,
             }}
           >
@@ -220,6 +222,7 @@ const MainPageLanding = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              textAlign: "right",
               gap: 1,
             }}
           >

@@ -105,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
         </ListItem>
         <ListItem button>
           <CustomLink id="publications" onClick={handleDrawerToggle}>
-            <ListItemText primary="Publikasjoner" />
+            <ListItemText primary="Rapporter" />
           </CustomLink>
         </ListItem>
         <ListItem button>
@@ -208,7 +208,7 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
                 <CustomLink id="publications">
                   <ButtonBase>
                     <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
-                      <Typography variant="h6">Publikasjoner</Typography>
+                      <Typography variant="h6">Rapporter</Typography>
                     </Box>
                   </ButtonBase>
                 </CustomLink>
