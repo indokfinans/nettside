@@ -12,9 +12,9 @@ const MainPageContactForm: React.FC = () => {
         event.preventDefault();
 
         // EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY are environment variables
-        const serviceId = process.env.EMAILJS_SERVICE_ID || '';
-        const templateId = process.env.EMAILJS_TEMPLATE_ID || '';
-        const publicKey = process.env.EMAILJS_PUBLIC_KEY || '';
+        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || '';
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '';
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '';
 
         emailjs.sendForm(serviceId, templateId, event.currentTarget, {
             publicKey: publicKey,

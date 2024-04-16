@@ -16,9 +16,9 @@ const MainPagePostsSlideShow: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const systemUserToken = encodeURIComponent(process.env.META_SYSTEM_USER_ACCESS_TOKEN || '');
+      const systemUserToken = encodeURIComponent(process.env.REACT_APP_META_SYSTEM_USER_ACCESS_TOKEN || '');
       // Fetch all post IDs
-      const iguser_id = encodeURIComponent(process.env.META_IG_USER_ID || "");
+      const iguser_id = encodeURIComponent(process.env.REACT_APP_META_IG_USER_ID || "");
       if (!iguser_id || !systemUserToken) {
         // If the Instagram user ID is not set or the system user token is not set, return an empty array
         console.error("Instagram user ID or system user token not set");
