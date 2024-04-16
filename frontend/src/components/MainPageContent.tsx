@@ -35,7 +35,7 @@ const MainPageContent = () => {
               av studenter fra alle årstrinn, med hensikt å fasilitere for
               kunnskaps- og erfaringsoverføring på tvers av kullene. Det første
               året etter oppstart forvaltet finansklubben en papirportefølje som
-              utkonkurrerte Oslo Børs.
+              utkonkurrerte Oslo Børs. Siden november 2023 har klubben forvaltet en reell portefølje med midler fra våre sponsorer Carnegie og DNB Markets.
             </Typography>
             {/* <Button variant="contained" color="primary">
               Les mer

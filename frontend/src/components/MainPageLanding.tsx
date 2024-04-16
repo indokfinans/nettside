@@ -49,7 +49,7 @@ const MainPageLanding = () => {
                   padding: "0 4px",
                 }}
               >
-                meravkastning.
+                meravkastning
               </Box>
             </Typography>
             <Typography variant="h4" color="text.secondary">
