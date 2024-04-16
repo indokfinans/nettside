@@ -38,7 +38,7 @@ const MainPageLanding = () => {
         >
           <Box sx={{ "& > :not(style)": { mb: { xs: 2, sm: 4 } } }}>
             <Typography variant="h1" color="text.secondary" gutterBottom>
-             {"Sammen skaper vi\t"}
+              {"Sammen skaper vi\t"}
               <Box
                 component="span"
                 color={"text.primary"}
@@ -57,17 +57,17 @@ const MainPageLanding = () => {
               økonomi og teknologiledelse (indøk) ved NTNU, Trondheim.
             </Typography>
             <Stack direction="row" spacing={2}>
-              <CustomLink id="publications">
+              <CustomLink id="/portfolio">
                 <ButtonBase>
                   <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
-                    <Typography variant="button">Årsrapport</Typography>
+                    <Typography variant="body1">Portefølje</Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
-              <CustomLink id="about">
+              <CustomLink id="publications">
                 <ButtonBase>
                   <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
-                    <Typography variant="button" sx={{ color: "#ffffff" }}>Om oss</Typography>
+                    <Typography variant="body1" sx={{ color: "#ffffff" }}>Rapporter</Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
@@ -108,12 +108,12 @@ const MainPageLanding = () => {
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
             }}
-            >
-          <Box
-            component="img"
-            src={carnegie_logo}
-            alt="Carnegie Logo"
-          />
+          >
+            <Box
+              component="img"
+              src={carnegie_logo}
+              alt="Carnegie Logo"
+            />
           </Link>
           <Link href="https://www.dnb.no/markets" target="_blank" rel="noopener noreferrer"
             sx={{
@@ -123,12 +123,12 @@ const MainPageLanding = () => {
               pr: (theme) => theme.spacing(2),
               pl: (theme) => theme.spacing(2),
             }}
-            >
-          <Box
-            component="img"
-            src={dnb_markets_logo}
-            alt="DNB Markets Logo"
-          />
+          >
+            <Box
+              component="img"
+              src={dnb_markets_logo}
+              alt="DNB Markets Logo"
+            />
           </Link>
         </Grid>
         <Grid
@@ -157,13 +157,13 @@ const MainPageLanding = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Typography
-              variant="h6"
-              sx={{ display: { xs: "none", sm: "block" } }}
-              color="secondary"
-            >
-              @indokfinans
-            </Typography>
+              <Typography
+                variant="h6"
+                sx={{ display: { xs: "none", sm: "block" } }}
+                color="secondary"
+              >
+                @indokfinans
+              </Typography>
             </Link>
             <Link
               href="https://www.instagram.com/indokfinans"
@@ -194,13 +194,13 @@ const MainPageLanding = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Typography
-              variant="h6"
-              color="secondary"
-              sx={{ display: { xs: "none", sm: "block" } }}
-            >
-              InFi - Indøk Finansklubb
-            </Typography>
+              <Typography
+                variant="h6"
+                color="secondary"
+                sx={{ display: { xs: "none", sm: "block" } }}
+              >
+                InFi - Indøk Finansklubb
+              </Typography>
             </Link>
             <Link
               href="https://www.facebook.com/IndokFinansklubb"
@@ -231,13 +231,13 @@ const MainPageLanding = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-            <Typography
-              variant="h6"
-              sx={{ display: { xs: "none", sm: "block" } }}
-              color="secondary"
-            >
-              InFi - Indøk Finansklubb
-            </Typography>
+              <Typography
+                variant="h6"
+                sx={{ display: { xs: "none", sm: "block" } }}
+                color="secondary"
+              >
+                InFi - Indøk Finansklubb
+              </Typography>
             </Link>
             <Link
               href="https://www.linkedin.com/company/indokfinans"
