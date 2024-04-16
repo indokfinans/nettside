@@ -73,25 +73,23 @@ def GetTickerPrices(req: func.HttpRequest) -> func.HttpResponse:
             pass
 
     if ticker_symbols:
+        # Ensure uniformity in ticker symbols
+        ticker_symbols = [symbol.strip().upper() for symbol in ticker_symbols]
         try:
-            # Determine the appropriate period to cover weekends and holidays
-            today = datetime.now()
-            if today.weekday() == 0:  # It's Monday
-                period = "7d"  # Cover the previous weekend
-            else:
-                period = "5d"  # Cover enough days to ensure data is available
-
             # Fetch data for all tickers at once
-            data = yf.download(ticker_symbols, period=period, group_by='ticker')
+            data = yf.download(ticker_symbols, period="1mo")
 
             prices = []
             for symbol in ticker_symbols:
-                symbol = symbol.strip().upper()  # Ensure uniformity for lookup
-                if symbol in data.columns.get_level_values(0):
-                    last_price = data[symbol]['Close'].iloc[-1]
-                    prices.append(float(last_price))
-                else:
-                    prices.append(None)  # Handle the case where no data is found
+                try:
+                    last_price = data['Close'][symbol].iloc[-1]  # Last available closing price
+                    # If the price is not available, or NaN, return -1
+                    if last_price != last_price:
+                        prices.append(-1)
+                    else:
+                        prices.append(float(last_price))
+                except KeyError:
+                    prices.append(-1)
 
             return func.HttpResponse(json.dumps(prices), status_code=200, headers={"Content-Type": "application/json"})
         except Exception as e:
