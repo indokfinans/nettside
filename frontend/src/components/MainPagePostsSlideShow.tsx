@@ -14,6 +14,8 @@ const MainPagePostsSlideShow: React.FC = () => {
   const slider1 = useRef<Slider>(null);
   const [articles, setArticles] = useState<Article[]>([]);
 
+  const numLinks = 10;
+
   useEffect(() => {
     const fetchPosts = async () => {
       const systemUserToken = encodeURIComponent(process.env.REACT_APP_META_SYSTEM_USER_ACCESS_TOKEN || '');
@@ -28,7 +30,7 @@ const MainPagePostsSlideShow: React.FC = () => {
       const response = await fetch(`https://graph.facebook.com/v19.0/${iguser_id}/media?access_token=${systemUserToken}`);
       const data = await response.json();
 
-      const postLinks = await Promise.all(data.data.map(async (post: { id: string }) => {
+      const postLinks = await Promise.all(data.data.slice(0, numLinks).map(async (post: { id: string }) => {
         // Fetch the permalink for each post ID
         const response = await fetch(`https://graph.facebook.com/v19.0/${encodeURIComponent(post.id)}?access_token=${systemUserToken}&fields=permalink`);
         const postData = await response.json();
