@@ -91,7 +91,7 @@ const MainPagePostsSlideShow: React.FC = () => {
                 overflow: "hidden",
               }}
             >
-              <InstagramEmbed url={article.link} width={328} captioned={false} />
+              <InstagramEmbed url={article.link} width={328} captioned={false}  retryDelay={20000}/>
             </Box>
           ))}
         </Slider>
