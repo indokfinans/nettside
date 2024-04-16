@@ -5,9 +5,8 @@ import { Box } from '@mui/material';
 const LookerStudioEmbed: React.FC = () => {
   return (
     <Box style={{ height: '100vh' }}>
-      whoops, there is nothing here yet
-      {/* <iframe
-        src="https://lookerstudio.google.com/embed/reporting/ff60f621-266e-41a5-b201-5db0ee01d91a/page/MM"
+      <iframe
+        src="https://lookerstudio.google.com/embed/reporting/a200899e-910f-49c4-9ad6-abba13e5ed9f/page/WF3wD"
         frameBorder="0"
         width="100%"
         height="100%"
@@ -15,7 +14,7 @@ const LookerStudioEmbed: React.FC = () => {
         title="Looker Studio Report"
         style={{ border: 'none' }}
         sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
-      /> */}
+      />
     </Box>
   );
 };

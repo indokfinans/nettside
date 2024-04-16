@@ -12,7 +12,6 @@ let theme = createTheme({
       main: "#CCE6F7",
     },
     info: {
-      // orange/yellow
       main: "#466D8C",
     },
     background: {
