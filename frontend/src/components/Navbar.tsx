@@ -177,6 +177,13 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
                   alignItems: "center", // Add this line
                 }}
               >
+              <CustomLink id="https://docs.google.com/forms/d/e/1FAIpQLSfC8SiofZfvwUieTjzAHlSl_uGZzSThD7ai0Ukpa2sPuNaNGw/viewform?usp=sf_link" openInNewTab={true}>
+                <ButtonBase>
+                  <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
+                    <Typography variant="body1">Søk nå!</Typography>
+                  </Box>
+                </ButtonBase>
+              </CustomLink>
                 <CustomLink id="about">
                   <ButtonBase>
                     <Box sx={{ color: "inherit" }}>

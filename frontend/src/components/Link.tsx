@@ -7,9 +7,10 @@ interface CustomLinkProps {
   id: string;
   children: React.ReactNode;
   onClick?: () => void;
+  openInNewTab?: boolean;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ id, children, onClick }) => {
+const CustomLink: React.FC<CustomLinkProps> = ({ id, children, onClick, openInNewTab = false }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const homepagePath = '/home'; // Define your homepage path accordingly
@@ -28,7 +29,12 @@ const CustomLink: React.FC<CustomLinkProps> = ({ id, children, onClick }) => {
 
   if (id.includes('/')) {
     return (
-      <MuiLink href={id} onClick={onClick}>
+      <MuiLink
+        href={id}
+        onClick={onClick}
+        target={openInNewTab ? "_blank" : undefined}
+        rel={openInNewTab ? "noopener noreferrer" : undefined}
+      >
         {children}
       </MuiLink>
     );
