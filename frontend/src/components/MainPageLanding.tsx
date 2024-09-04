@@ -59,9 +59,8 @@ const MainPageLanding = () => {
             <Stack direction="row" spacing={2}>
               <CustomLink id="/portfolio">
                 <ButtonBase>
-                  {/* <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}> */}
-                  <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
-                    <Typography variant="body1" sx={{ color: "#ffffff" }}>Portefølje</Typography>
+                  <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
+                    <Typography variant="body1" >Portefølje</Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
@@ -69,13 +68,6 @@ const MainPageLanding = () => {
                 <ButtonBase>
                   <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
                     <Typography variant="body1" sx={{ color: "#ffffff" }}>Rapporter</Typography>
-                  </Box>
-                </ButtonBase>
-              </CustomLink>
-              <CustomLink id="https://docs.google.com/forms/d/e/1FAIpQLSfC8SiofZfvwUieTjzAHlSl_uGZzSThD7ai0Ukpa2sPuNaNGw/viewform?usp=sf_link" openInNewTab={true}>
-                <ButtonBase>
-                  <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
-                    <Typography variant="body1">Søk nå!</Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
