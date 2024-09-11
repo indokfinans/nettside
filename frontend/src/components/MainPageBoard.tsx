@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Grid, Typography, Avatar } from "@mui/material";
 
-import helene from "../resources/images/profilbilder/helene.jpeg"
-import johannes from "../resources/images/profilbilder/johannes.jpeg"
-import martin from "../resources/images/profilbilder/martin.jpeg"
-import mikkel from "../resources/images/profilbilder/mikkel.jpeg"
-import bjorn from "../resources/images/profilbilder/bjorn.jpeg"
-import eskild from "../resources/images/profilbilder/eskild.jpeg"
+import nicholas from "../resources/images/profilbilder/nicholas.jpg"
+import elida from "../resources/images/profilbilder/elida.jpg"
+import jorgen from "../resources/images/profilbilder/jorgen.jpg"
+import torbjorn from "../resources/images/profilbilder/torbjorn.png"
+import ida from "../resources/images/profilbilder/ida.jpg"
+import magnus from "../resources/images/profilbilder/magnus.png"
+import christopher from "../resources/images/profilbilder/christopher.jpg"
 import { useTheme, useMediaQuery } from '@mui/material';
 
 
@@ -14,17 +15,17 @@ import { useTheme, useMediaQuery } from '@mui/material';
 interface Member {
     name: string;
     title: string;
-    email: string;
     image: string; // URL to the member's image
 }
 
 const members: Member[] = [
-    { name: "Martin Kristiansen Tømt", title: "Leder", email: "leder@example.com", image: martin },
-    { name: "Bjørn Solli Moxnes", title: "Nestleder", email: "co-leder@example.com", image: bjorn },
-    { name: "Mikkel Honningsvåg Sandhaug", title: "Porteføljesjef", email: "mikkel@gmail.com", image: mikkel },
-    { name: "Eskild Fasseland", title: "Leder Kvantegruppen", email: "kvantitativ@example.com", image: eskild },
-    { name: "Helene Lyslo Kristiansen", title: "Bedriftskontakt og Markedsføring", email: "markedsforing@example.com", image: helene },
-    { name: "Johannes Kvåle", title: "HR-leder", email: "hr@example.com", image: johannes },
+    { name: "Magnus Bautz-Holter", title: "Leder", image: magnus },
+    { name: "Torbjørn Grande", title: "Nestleder", image: torbjorn },
+    { name: "Nicholas Selvik", title: "Leder for porteføljegruppen", image: nicholas },
+    { name: "Christopher Laloi Dybdahl", title: "Leder for kvantegruppen", image: christopher },
+    { name: "Ida Nikoline Rogne", title: "HR-ansvarlig", image: ida },
+    { name: "Jørgen Halvorsen", title: "Arrangementsansvarlig", image: jorgen },
+    { name: "Elida Kraggerud", title: "Markedsføringsansvarlig", image: elida },
 ];
 
 const MainPageBoard = () => {
@@ -46,7 +47,7 @@ const MainPageBoard = () => {
                         sx={{
                             display: "flex",
                             flexDirection: "column",
-                            justifyContent: "center",
+                            justifyContent: "flex-start", // Change this line
                             alignItems: "center",
                             padding: (theme) => theme.spacing(2),
                         }}
@@ -62,7 +63,7 @@ const MainPageBoard = () => {
                         />
 
                         <Typography variant={isXsScreen ? "body2" : "h5"} gutterBottom color={"secondary"} align="center">
-                            {member.name}
+                            {""}{member.name}
                         </Typography>
                         <Typography variant={isXsScreen ? "body1" : "h4"} gutterBottom color={"secondary"} align="center">
                             {member.title}
