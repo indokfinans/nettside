@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Box, Typography, Button, Grid, Stack } from "@mui/material";
-import top_right from "../resources/images/top_right_3.jpeg";
+import top_right from "../resources/images/top_right_4.jpg";
 import carnegie_logo from "../resources/images/carnegie_logo.svg";
 import dnb_markets_logo from "../resources/images/dnb_markets_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
