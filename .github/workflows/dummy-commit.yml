@@ -15,7 +15,7 @@ jobs:
       - name: Get commit email
         id: get_email
         run: |
-          email="it@indokfinans.no"
+          email=$(git log -1 --pretty=format:'%ae')
           echo "Commit email: $email"
           echo "email=$email" >> $GITHUB_ENV
 
