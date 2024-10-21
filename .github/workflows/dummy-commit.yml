@@ -1,4 +1,4 @@
-name: Dummy commit if someone else than it@indokfinans.no commits
+name: Dummy commit if someone else than it@indokfinans.no has commited
 
 on:
   push:
