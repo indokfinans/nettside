@@ -35,8 +35,8 @@ const logo_box = (
 		src={logo}
 		alt="Logo"
 		sx={{
-			height: { xs: "80px", sm: "150px" },
-			width: { xs: "80px", sm: "150px" },
+			height: { xs: "88px", sm: "165px" },
+			width: { xs: "88px", sm: "165px" },
 		}}
 	/>
 )
