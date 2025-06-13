@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
-import logo from "../resources/images/logo.png";
+import logo from "../resources/images/logo.svg";
 import { useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from 'react-scroll';
 import Fab from '@mui/material/Fab';
