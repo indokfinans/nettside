@@ -1,14 +1,11 @@
-import React from "react";
-import { Link, Box, Typography, Button, Grid, Stack } from "@mui/material";
-import top_right from "../resources/images/top_right_4.jpg";
-import carnegie_logo from "../resources/images/carnegie_logo.svg";
-import dnb_markets_logo from "../resources/images/dnb_markets_logo.svg";
+import { Box, Grid, Link, Stack, Typography } from "@mui/material";
+import dnb_carnegie_logo from "../resources/images/DNB_Carnegie_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
 import instagramLogo from "../resources/images/instagram_logo.svg";
 import linkedinLogo from "../resources/images/linkedIn_logo.svg";
+import top_right from "../resources/images/top_right_4.jpg";
 
 import { ButtonBase } from "@mui/material";
-
 
 import { CustomLink } from "./Link";
 
@@ -59,15 +56,31 @@ const MainPageLanding = () => {
             <Stack direction="row" spacing={2}>
               <CustomLink id="/portfolio">
                 <ButtonBase>
-                  <Box sx={{ bgcolor: "secondary.main", color: "primary.main", p: 1, borderRadius: 1 }}>
-                    <Typography variant="body1" >Portefølje</Typography>
+                  <Box
+                    sx={{
+                      bgcolor: "secondary.main",
+                      color: "primary.main",
+                      p: 1,
+                      borderRadius: 1,
+                    }}
+                  >
+                    <Typography variant="body1">Portefølje</Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
               <CustomLink id="publications">
                 <ButtonBase>
-                  <Box sx={{ border: "1px solid", borderColor: "#ffffff", p: 1, borderRadius: 1 }}>
-                    <Typography variant="body1" sx={{ color: "#ffffff" }}>Rapporter</Typography>
+                  <Box
+                    sx={{
+                      border: "1px solid",
+                      borderColor: "#ffffff",
+                      p: 1,
+                      borderRadius: 1,
+                    }}
+                  >
+                    <Typography variant="body1" sx={{ color: "#ffffff" }}>
+                      Rapporter
+                    </Typography>
                   </Box>
                 </ButtonBase>
               </CustomLink>
@@ -100,34 +113,21 @@ const MainPageLanding = () => {
             alignItems: "center",
           }}
         >
-          <Link href="https://www.carnegie.no/" target="_blank" rel="noopener noreferrer"
+          <Link
+            href="https://www.dnb.no/markets"
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
-              width: { xs: "50%", sm: "15%" },
-              //   mt: { xs: 0.5, sm: 0 },
-              //   ml: { xs: 0, sm: 0.5 },
+              width: { xs: "60%", sm: "25%" },
               pr: (theme) => theme.spacing(2),
-              pl: (theme) => theme.spacing(2),
+              pl: (theme) => theme.spacing(4),
+              pb: (theme) => theme.spacing(6),
             }}
           >
             <Box
               component="img"
-              src={carnegie_logo}
-              alt="Carnegie Logo"
-            />
-          </Link>
-          <Link href="https://www.dnb.no/markets" target="_blank" rel="noopener noreferrer"
-            sx={{
-              width: { xs: "50%", sm: "15%" },
-              //   mt: { xs: 0.5, sm: 0 },
-              //   ml: { xs: 0, sm: 0.5 },
-              pr: (theme) => theme.spacing(2),
-              pl: (theme) => theme.spacing(2),
-            }}
-          >
-            <Box
-              component="img"
-              src={dnb_markets_logo}
-              alt="DNB Markets Logo"
+              src={dnb_carnegie_logo}
+              alt="DNB Carnegie Logo"
             />
           </Link>
         </Grid>
