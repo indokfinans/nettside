@@ -1,6 +1,6 @@
-/* html {
-  overflow: hidden;
-} */
+html {
+  background-color: #172F56; /* Match your theme's primary color */
+}
 
 body {
   margin: 0;
@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #172F56; /* Match your theme's primary color */
   /* overflow: hidden; */
 }
 
