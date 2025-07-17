@@ -16,3 +16,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Portrait Enhancement Filter */
+.portrait-enhanced {
+  filter: 
+    contrast(1.15)        /* Slightly increase contrast for definition */
+    saturate(1.25)        /* Boost saturation for more vibrant colors */
+    brightness(1.05)      /* Subtle brightness increase */
+    hue-rotate(2deg)      /* Very slight warm tone adjustment */
+    sepia(0.03);          /* Tiny bit of warmth/sepia tone */
+  
+  transition: filter 0.3s ease; /* Smooth transition for any hover effects */
+}
+
+/* Optional: Add a subtle hover effect */
+.portrait-enhanced:hover {
+  filter: 
+    contrast(1.18)
+    saturate(1.3)
+    brightness(1.08)
+    hue-rotate(2deg)
+    sepia(0.03);
+}
+
+/* 
+  ALTERNATIVE STRONGER ENHANCEMENT (uncomment to use instead):
+  Replace the above .portrait-enhanced class with this for more dramatic effect:
+
+.portrait-enhanced {
+  filter: 
+    contrast(1.25)
+    saturate(1.4)
+    brightness(1.1)
+    hue-rotate(3deg)
+    sepia(0.05);
+  transition: filter 0.3s ease;
+}
+*/
