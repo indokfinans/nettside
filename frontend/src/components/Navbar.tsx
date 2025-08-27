@@ -90,11 +90,8 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
           </CustomLink>
         </ListItem>
         <ListItem button>
-          <CustomLink
-            id="https://docs.google.com/forms/d/e/1FAIpQLSe2nrnZ7QlwlWOFkWsctT9rQ-kwGCED4bHXv3K4geLH1rGPCw/viewform"
-            onClick={handleDrawerToggle}
-          >
-            <ListItemText primary="Bli medlem" />
+          <CustomLink id="/portfolio" onClick={handleDrawerToggle}>
+            <ListItemText primary="Portefølje" />
           </CustomLink>
         </ListItem>
         <ListItem button>
@@ -181,14 +178,13 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
                     </Box>
                   </ButtonBase>
                 </CustomLink>
-                <ButtonBase
-                  component="a"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSe2nrnZ7QlwlWOFkWsctT9rQ-kwGCED4bHXv3K4geLH1rGPCw/viewform"
-                >
-                  <Box sx={{ color: "secondary.main" }}>
-                    <Typography variant="h6">Bli medlem</Typography>
-                  </Box>
-                </ButtonBase>
+                <CustomLink id="/portfolio">
+                  <ButtonBase>
+                    <Box sx={{ color: "secondary.main" }}>
+                      <Typography variant="h6">Portefølje</Typography>
+                    </Box>
+                  </ButtonBase>
+                </CustomLink>
                 <CustomLink id="board">
                   <ButtonBase>
                     <Box sx={{ color: "inherit" }}>
@@ -205,26 +201,18 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
                 </CustomLink>
                 <CustomLink id="publications">
                   <ButtonBase>
-                    <Box sx={{ color: "secondary.main" }}>
+                    <Box
+                      sx={{
+                        bgcolor: "secondary.main",
+                        color: "primary.main",
+                        p: 1,
+                        borderRadius: 1,
+                      }}
+                    >
                       <Typography variant="h6">Rapporter</Typography>
                     </Box>
                   </ButtonBase>
                 </CustomLink>
-                <ButtonBase
-                  component="a"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSe2nrnZ7QlwlWOFkWsctT9rQ-kwGCED4bHXv3K4geLH1rGPCw/viewform"
-                >
-                  <Box
-                    sx={{
-                      bgcolor: "secondary.main",
-                      color: "primary.main",
-                      p: 1,
-                      borderRadius: 1,
-                    }}
-                  >
-                    <Typography variant="h6">Bli medlem</Typography>
-                  </Box>
-                </ButtonBase>
                 <CustomLink id="contact">
                   <ButtonBase>
                     <Box

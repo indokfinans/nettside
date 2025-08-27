@@ -54,21 +54,20 @@ const MainPageLanding = () => {
               økonomi og teknologiledelse (indøk) ved NTNU, Trondheim.
             </Typography>
             <Stack direction="row" spacing={2}>
-              <ButtonBase
-                component="a"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe2nrnZ7QlwlWOFkWsctT9rQ-kwGCED4bHXv3K4geLH1rGPCw/viewform"
-              >
-                <Box
-                  sx={{
-                    bgcolor: "secondary.main",
-                    color: "primary.main",
-                    p: 1,
-                    borderRadius: 1,
-                  }}
-                >
-                  <Typography variant="body1">Bli medlem</Typography>
-                </Box>
-              </ButtonBase>
+              <CustomLink id="/portfolio">
+                <ButtonBase>
+                  <Box
+                    sx={{
+                      bgcolor: "secondary.main",
+                      color: "primary.main",
+                      p: 1,
+                      borderRadius: 1,
+                    }}
+                  >
+                    <Typography variant="body1">Portefølje</Typography>
+                  </Box>
+                </ButtonBase>
+              </CustomLink>
               <CustomLink id="publications">
                 <ButtonBase>
                   <Box
