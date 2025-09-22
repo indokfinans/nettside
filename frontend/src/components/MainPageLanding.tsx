@@ -3,7 +3,7 @@ import dnb_carnegie_logo from "../resources/images/DNB_Carnegie_logo.svg";
 import facebookLogo from "../resources/images/facebook_logo.svg";
 import instagramLogo from "../resources/images/instagram_logo.svg";
 import linkedinLogo from "../resources/images/linkedIn_logo.svg";
-import top_right from "../resources/images/top_right_4.jpg";
+import top_right from "../resources/images/top_right_6.jpg";
 
 import { ButtonBase } from "@mui/material";
 
@@ -101,6 +101,7 @@ const MainPageLanding = () => {
             width={{ xs: "100%", sm: "100%" }}
             // minWidth={"700px"}
             height={"auto"}
+            // className="main-image"
           />
         </Grid>
         <Grid

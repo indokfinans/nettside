@@ -1,13 +1,13 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-import christopher from "../resources/images/profilbilder/christopher.jpg";
-import elida from "../resources/images/profilbilder/elida.jpg";
-import ida from "../resources/images/profilbilder/ida.jpg";
-import jorgen from "../resources/images/profilbilder/jorgen.jpg";
-import magnus from "../resources/images/profilbilder/magnus.png";
-import nicholas from "../resources/images/profilbilder/nicholas.jpg";
-import torbjorn from "../resources/images/profilbilder/torbjorn.png";
+import anders from "../resources/images/profilbilder/anders.jpg";
+import audun from "../resources/images/profilbilder/audun.jpg";
+import eskild from "../resources/images/profilbilder/eskild.jpg";
+import isak from "../resources/images/profilbilder/isak.jpg";
+// import sondre from "../resources/images/profilbilder/logo.svg";
+import maia from "../resources/images/profilbilder/maia.jpg";
+import maria from "../resources/images/profilbilder/maria.jpg";
 
 interface Member {
   name: string;
@@ -16,21 +16,25 @@ interface Member {
 }
 
 const members: Member[] = [
-  { name: "Magnus Bautz-Holter", title: "Leder", image: magnus },
-  { name: "Torbjørn Grande", title: "Nestleder", image: torbjorn },
+  { name: "Isak Haseth", title: "Leder", image: isak },
+  { name: "Audun Haukeland", title: "Nestleder", image: audun },
   {
-    name: "Nicholas Selvik",
+    name: "Anders Bekkevard",
     title: "Leder for porteføljegruppen",
-    image: nicholas,
+    image: anders,
   },
   {
-    name: "Christopher Laloi Dybdahl",
-    title: "Leder for kvantegruppen",
-    image: christopher,
+    name: "Eskild T. W. Fassseland",
+    title: "Utdanningsansvarlig",
+    image: eskild,
   },
-  { name: "Ida Nikoline Rogne", title: "HR-ansvarlig", image: ida },
-  { name: "Jørgen Halvorsen", title: "Arrangementsansvarlig", image: jorgen },
-  { name: "Elida Kraggerud", title: "Markedsføringsansvarlig", image: elida },
+  { name: "Maia Øverland", title: "Sosialansvarlig", image: maia },
+  // { name: "Sondre Jentoft", title: "Bedriftskontakt", image: sondre },
+  {
+    name: "Maria Bjørnvik-López",
+    title: "Markedsføringsansvarlig",
+    image: maria,
+  },
 ];
 
 const MainPageBoard = () => {

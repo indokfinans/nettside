@@ -18,14 +18,25 @@ code {
     monospace;
 }
 
+/* Main image filter */
+.main-image {
+  filter: 
+    brightness(1.05)   /* slightly brighter */
+    contrast(1.15)     /* stronger separation */
+    saturate(1.2)     /* richer colors */
+    sepia(0.1)        /* subtle warm cast */
+    hue-rotate(-10deg)  /* shift toward warm reds */
+    ;
+}
+
 /* Portrait Enhancement Filter */
 .portrait-enhanced {
   filter: 
-    contrast(1.15)        /* Slightly increase contrast for definition */
-    saturate(1.25)        /* Boost saturation for more vibrant colors */
-    brightness(1.05)      /* Subtle brightness increase */
-    hue-rotate(2deg)      /* Very slight warm tone adjustment */
-    sepia(0.03);          /* Tiny bit of warmth/sepia tone */
+    contrast(1.2)        /* Slightly increase contrast for definition */
+    saturate(1.35)        /* Boost saturation for more vibrant colors */
+    brightness(0.9)      /* Subtle brightness increase */
+    hue-rotate(-8deg)     /* Shift toward red tones */
+    sepia(0.08);          /* More warmth/red tone */
   
   transition: filter 0.3s ease; /* Smooth transition for any hover effects */
 }
@@ -35,9 +46,9 @@ code {
   filter: 
     contrast(1.18)
     saturate(1.3)
-    brightness(1.08)
-    hue-rotate(2deg)
-    sepia(0.03);
+    brightness(1)
+    hue-rotate(-5deg)
+    sepia(0.08);
 }
 
 /* 
