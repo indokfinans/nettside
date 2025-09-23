@@ -1,13 +1,13 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-import anders from "../resources/images/profilbilder/anders.jpg";
-import audun from "../resources/images/profilbilder/audun.jpg";
+import anders from "../resources/images/profilbilder/anders.jpeg";
+import audun from "../resources/images/profilbilder/audun.jpeg";
 import eskild from "../resources/images/profilbilder/eskild.jpeg";
-import isak from "../resources/images/profilbilder/isak.jpg";
+import isak from "../resources/images/profilbilder/isak.jpeg";
 // import sondre from "../resources/images/profilbilder/logo.svg";
-import maia from "../resources/images/profilbilder/maia.jpg";
-import maria from "../resources/images/profilbilder/maria.jpg";
+import maia from "../resources/images/profilbilder/maia.jpeg";
+import maria from "../resources/images/profilbilder/maria.jpeg";
 
 interface Member {
   name: string;
