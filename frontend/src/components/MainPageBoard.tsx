@@ -3,7 +3,7 @@ import { Avatar, Box, Grid, Typography } from "@mui/material";
 import { useMediaQuery, useTheme } from "@mui/material";
 import anders from "../resources/images/profilbilder/anders.jpg";
 import audun from "../resources/images/profilbilder/audun.jpg";
-import eskild from "../resources/images/profilbilder/eskild.jpg";
+import eskild from "../resources/images/profilbilder/eskild.jpeg";
 import isak from "../resources/images/profilbilder/isak.jpg";
 // import sondre from "../resources/images/profilbilder/logo.svg";
 import maia from "../resources/images/profilbilder/maia.jpg";
