@@ -20,7 +20,7 @@ const members: Member[] = [
   { name: "Audun Haukeland", title: "Nestleder", image: audun },
   {
     name: "Anders Bekkevard",
-    title: "Leder for porteføljegruppen",
+    title: "Porteføljeansvarlig",
     image: anders,
   },
   {
