@@ -24,7 +24,7 @@ const members: Member[] = [
     image: anders,
   },
   {
-    name: "Eskild T. W. Fassseland",
+    name: "Eskild T. W. Fasseland",
     title: "Utdanningsansvarlig",
     image: eskild,
   },
