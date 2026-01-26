@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import middle_right from "../resources/images/middle_right.jpeg"; // Make sure the path is correct
 
 const MainPageContent = () => {

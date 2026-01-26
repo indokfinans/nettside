@@ -1,8 +1,6 @@
 // src/components/Footer.tsx
 import React from 'react';
 import { Box, Grid, Typography, Link } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import facebookLogo from "../resources/images/facebook_logo.svg";
 import instagramLogo from "../resources/images/instagram_logo.svg";
 import linkedinLogo from "../resources/images/linkedIn_logo.svg";

@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
     if (navbarRef.current) {
       onHeightChange(`${navbarRef.current.offsetHeight}px`);
     }
-  }, []);
+  }, [onHeightChange]);
 
   useEffect(() => {
     const checkScrollTop = () => {
