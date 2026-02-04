@@ -53,6 +53,7 @@ const MainPageLanding = () => {
               Børsklubben for finansinteresserte studenter ved Industriell
               økonomi og teknologiledelse (indøk) ved NTNU, Trondheim.
             </Typography>
+            {/* portefølje currently not working
             <Stack direction="row" spacing={2}>
               <CustomLink id="/portfolio">
                 <ButtonBase>
@@ -80,6 +81,39 @@ const MainPageLanding = () => {
                   >
                     <Typography variant="body1" sx={{ color: "#ffffff" }}>
                       Rapporter
+                    </Typography>
+                  </Box>
+                </ButtonBase>
+              </CustomLink>
+            </Stack>
+            */}
+            <Stack direction="row" spacing={2}>
+              <CustomLink id="publications">
+                <ButtonBase>
+                  <Box
+                    sx={{
+                      bgcolor: "secondary.main",
+                      color: "primary.main",
+                      p: 1,
+                      borderRadius: 1,
+                    }}
+                  >
+                    <Typography variant="body1">Rapporter</Typography>
+                  </Box>
+                </ButtonBase>
+              </CustomLink>
+              <CustomLink id="contact">
+                <ButtonBase>
+                  <Box
+                    sx={{
+                      border: "1px solid",
+                      borderColor: "#ffffff",
+                      p: 1,
+                      borderRadius: 1,
+                    }}
+                  >
+                    <Typography variant="body1" sx={{ color: "#ffffff" }}>
+                      Ta kontakt
                     </Typography>
                   </Box>
                 </ButtonBase>

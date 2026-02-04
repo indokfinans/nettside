@@ -89,11 +89,12 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
             <ListItemText primary="Om oss" />
           </CustomLink>
         </ListItem>
+        {/* portefølje currently not working
         <ListItem button>
           <CustomLink id="/portfolio" onClick={handleDrawerToggle}>
             <ListItemText primary="Portefølje" />
           </CustomLink>
-        </ListItem>
+        </ListItem> */}
         <ListItem button>
           <CustomLink id="board" onClick={handleDrawerToggle}>
             <ListItemText primary="Styret" />
@@ -178,13 +179,14 @@ const Navbar: React.FC<NavbarProps> = ({ onHeightChange }) => {
                     </Box>
                   </ButtonBase>
                 </CustomLink>
+                {/* portefølje currently not working
                 <CustomLink id="/portfolio">
                   <ButtonBase>
                     <Box sx={{ color: "secondary.main" }}>
                       <Typography variant="h6">Portefølje</Typography>
                     </Box>
                   </ButtonBase>
-                </CustomLink>
+                </CustomLink> */}
                 <CustomLink id="board">
                   <ButtonBase>
                     <Box sx={{ color: "inherit" }}>
