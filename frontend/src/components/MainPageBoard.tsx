@@ -1,13 +1,13 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-import anders from "../resources/images/profilbilder/anders.jpeg";
-import audun from "../resources/images/profilbilder/audun.jpeg";
-import eskild from "../resources/images/profilbilder/eskild.jpeg";
-import isak from "../resources/images/profilbilder/isak.jpeg";
-// import sondre from "../resources/images/profilbilder/logo.svg";
-import maia from "../resources/images/profilbilder/maia.jpeg";
-import maria from "../resources/images/profilbilder/maria.jpeg";
+import christian from "../resources/images/profilbilder/christian.jpeg";
+import ida from "../resources/images/profilbilder/ida_rogne.jpeg";
+import maren from "../resources/images/profilbilder/maren.jpeg";
+import peter from "../resources/images/profilbilder/peter.jpeg";
+import stenMagnus from "../resources/images/profilbilder/sten_magnus.jpeg";
+import susanne from "../resources/images/profilbilder/susanne.jpeg";
+import tereza from "../resources/images/profilbilder/tereza.jpeg";
 
 interface Member {
   name: string;
@@ -16,25 +16,25 @@ interface Member {
 }
 
 const members: Member[] = [
-  { name: "Isak Haseth", title: "Leder", image: isak },
-  { name: "Audun Haukeland", title: "Nestleder", image: audun },
+  { name: "Ida Nikoline Rogne", title: "Leder", image: ida },
   {
-    name: "Anders Bekkevard",
+    name: "Sten Magnus Trovåg Wedum",
+    title: "Nestleder",
+    image: stenMagnus,
+  },
+  {
+    name: "Christian Myhre Knutson",
     title: "Porteføljeansvarlig",
-    image: anders,
+    image: christian,
   },
+  { name: "Peter Mikalsen", title: "Utdanningsansvarlig", image: peter },
+  { name: "Maren Milla Reinemo", title: "Sosialansvarlig", image: maren },
   {
-    name: "Eskild T. W. Fasseland",
-    title: "Utdanningsansvarlig",
-    image: eskild,
-  },
-  { name: "Maia Øverland", title: "Sosialansvarlig", image: maia },
-  // { name: "Sondre Jentoft", title: "Bedriftskontakt", image: sondre },
-  {
-    name: "Maria Bjørnvik-López",
+    name: "Tereza Van Myhra",
     title: "Markedsføringsansvarlig",
-    image: maria,
+    image: tereza,
   },
+  { name: "Susanne Torhaug", title: "Bedriftskontakt", image: susanne },
 ];
 
 const MainPageBoard = () => {
@@ -50,7 +50,7 @@ const MainPageBoard = () => {
       <Typography variant="h1" gutterBottom align="left" color={"error.main"}>
         Møt Styret
       </Typography>
-      <Grid container>
+      <Grid container justifyContent="center">
         {members.map((member, index) => (
           <Grid
             item
@@ -92,7 +92,8 @@ const MainPageBoard = () => {
               color={"secondary"}
               align="center"
             >
-              {member.title}
+              {/* Soft hyphen so long titles wrap before "ansvarlig" on mobile */}
+              {member.title.replace("ansvarlig", "­ansvarlig")}
             </Typography>
             {/* <Typography variant="body2">
                             <Link href={`mailto:${member.email}`} color="secondary">
