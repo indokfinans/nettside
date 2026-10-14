@@ -14,22 +14,25 @@ const MainPagePostsSlideShow: React.FC = () => {
   const slider1 = useRef<Slider>(null);
   const sliderBox = useRef<HTMLDivElement>(null);
   const [articles, setArticles] = useState<Article[]>([]);
+  const [visible, setVisible] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
-  // Autoplay only while the slider is on screen, so visitors see the newest post first
+  // Autoplay is driven here instead of by react-slick, whose own autoplay starts on mount.
+  // It only runs while the slider is on screen, so visitors see the newest post first.
   useEffect(() => {
     if (articles.length === 0 || !sliderBox.current) return;
-    // Stay paused until the observer reports the slider as visible (it never fires in hidden tabs)
-    slider1.current?.slickPause();
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        slider1.current?.slickPlay();
-      } else {
-        slider1.current?.slickPause();
-      }
+      setVisible(entry.intersectionRatio >= 0.5);
     }, { threshold: 0.5 });
     observer.observe(sliderBox.current);
     return () => observer.disconnect();
   }, [articles]);
+
+  useEffect(() => {
+    if (!visible || hovered) return;
+    const timer = setInterval(() => slider1.current?.slickNext(), 3000);
+    return () => clearInterval(timer);
+  }, [visible, hovered]);
 
   const numLinks = 10;
 
@@ -76,11 +79,7 @@ const MainPagePostsSlideShow: React.FC = () => {
     slidesToShow: 5,
     fade: false,
     slidesToScroll: 1,
-    autoplay: true,
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    pauseOnDotsHover: true,
-    autoplaySpeed: 3000,
+    autoplay: false,
     arrows: true,
     swipeToSlide: false,
     swipe: false,
@@ -96,7 +95,12 @@ const MainPagePostsSlideShow: React.FC = () => {
         Hold deg oppdatert på InFi
       </Typography>
 
-      <Box ref={sliderBox} sx={{ padding: { xs: 0 } }}>
+      <Box
+        ref={sliderBox}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        sx={{ padding: { xs: 0 } }}
+      >
         {/* Mount the slider only once posts are loaded, otherwise it starts at the wrong slide */}
         {articles.length > 0 && (
           <Slider ref={slider1} {...settingsMain}>
