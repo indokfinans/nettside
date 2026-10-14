@@ -18,6 +18,8 @@ const MainPagePostsSlideShow: React.FC = () => {
   // Autoplay only while the slider is on screen, so visitors see the newest post first
   useEffect(() => {
     if (articles.length === 0 || !sliderBox.current) return;
+    // Stay paused until the observer reports the slider as visible (it never fires in hidden tabs)
+    slider1.current?.slickPause();
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         slider1.current?.slickPlay();
