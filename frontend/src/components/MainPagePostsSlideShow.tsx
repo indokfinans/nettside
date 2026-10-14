@@ -15,24 +15,32 @@ const MainPagePostsSlideShow: React.FC = () => {
   const sliderBox = useRef<HTMLDivElement>(null);
   const [articles, setArticles] = useState<Article[]>([]);
   const [visible, setVisible] = useState(false);
-  const [hovered, setHovered] = useState(false);
 
   // Autoplay is driven here instead of by react-slick, whose own autoplay starts on mount.
   // It only runs while the slider is on screen, so visitors see the newest post first.
   useEffect(() => {
     if (articles.length === 0 || !sliderBox.current) return;
+    // Visible when half the slider is on screen, or it fills half the screen (embeds can be taller than the window)
     const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.intersectionRatio >= 0.5);
-    }, { threshold: 0.5 });
+      setVisible(entry.intersectionRatio >= 0.5 || entry.intersectionRect.height >= window.innerHeight / 2);
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
     observer.observe(sliderBox.current);
     return () => observer.disconnect();
   }, [articles]);
 
+  // The slider does not wrap, so autoplay rewinds to the newest post once the oldest is on screen
   useEffect(() => {
-    if (!visible || hovered) return;
-    const timer = setInterval(() => slider1.current?.slickNext(), 3000);
+    if (!visible) return;
+    const timer = setInterval(() => {
+      const atEnd = sliderBox.current?.querySelector(`.slick-slide[data-index="${articles.length - 1}"].slick-active`);
+      if (atEnd) {
+        slider1.current?.slickGoTo(0);
+      } else {
+        slider1.current?.slickNext();
+      }
+    }, 7000);
     return () => clearInterval(timer);
-  }, [visible, hovered]);
+  }, [visible, articles]);
 
   const numLinks = 10;
 
@@ -74,7 +82,7 @@ const MainPagePostsSlideShow: React.FC = () => {
 
   const settingsMain: Settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 1400,
     slidesToShow: 5,
     fade: false,
@@ -95,12 +103,7 @@ const MainPagePostsSlideShow: React.FC = () => {
         Hold deg oppdatert på InFi
       </Typography>
 
-      <Box
-        ref={sliderBox}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        sx={{ padding: { xs: 0 } }}
-      >
+      <Box ref={sliderBox} sx={{ padding: { xs: 0 } }}>
         {/* Mount the slider only once posts are loaded, otherwise it starts at the wrong slide */}
         {articles.length > 0 && (
           <Slider ref={slider1} {...settingsMain}>
