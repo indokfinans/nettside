@@ -12,7 +12,22 @@ interface Article {
 
 const MainPagePostsSlideShow: React.FC = () => {
   const slider1 = useRef<Slider>(null);
+  const sliderBox = useRef<HTMLDivElement>(null);
   const [articles, setArticles] = useState<Article[]>([]);
+
+  // Autoplay only while the slider is on screen, so visitors see the newest post first
+  useEffect(() => {
+    if (articles.length === 0 || !sliderBox.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        slider1.current?.slickPlay();
+      } else {
+        slider1.current?.slickPause();
+      }
+    }, { threshold: 0.5 });
+    observer.observe(sliderBox.current);
+    return () => observer.disconnect();
+  }, [articles]);
 
   const numLinks = 10;
 
@@ -79,22 +94,25 @@ const MainPagePostsSlideShow: React.FC = () => {
         Hold deg oppdatert på InFi
       </Typography>
 
-      <Box sx={{ padding: { xs: 0 } }}>
-        <Slider ref={slider1} {...settingsMain}>
-          {articles.map((article, index) => (
-            <Box key={index}
-              sx={{
-                width: 500,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-              }}
-            >
-              <InstagramEmbed url={article.link} width={328} captioned={false}  retryDelay={20000}/>
-            </Box>
-          ))}
-        </Slider>
+      <Box ref={sliderBox} sx={{ padding: { xs: 0 } }}>
+        {/* Mount the slider only once posts are loaded, otherwise it starts at the wrong slide */}
+        {articles.length > 0 && (
+          <Slider ref={slider1} {...settingsMain}>
+            {articles.map((article, index) => (
+              <Box key={index}
+                sx={{
+                  width: 500,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden",
+                }}
+              >
+                <InstagramEmbed url={article.link} width={328} captioned={false}  retryDelay={20000}/>
+              </Box>
+            ))}
+          </Slider>
+        )}
       </Box>
     </Box>
   );
